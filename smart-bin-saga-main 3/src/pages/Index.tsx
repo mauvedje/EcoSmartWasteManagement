@@ -12,10 +12,10 @@ const HomeSection = () => (
       <div className="flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 md:pr-12">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-            Smart Waste <span className="eco-text-gradient">Management</span> System
+            Smart Waste <span className="bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 bg-clip-text text-transparent">Management</span> System
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-            Revolutionizing waste disposal with IoT, AI, and blockchain technologies. 
+            Revolutionizing waste disposal with IoT, AI, and blockchain technologies.
             Creating cleaner cities, one smart bin at a time.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
@@ -31,9 +31,9 @@ const HomeSection = () => (
         </div>
         <div className="md:w-1/2 mt-10 md:mt-0">
           <div className="aspect-video bg-card rounded-lg shadow-lg overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" 
-              alt="Smart Waste Management" 
+            <img
+              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              alt="Smart Waste Management"
               className="w-full h-full object-cover"
             />
           </div>
@@ -65,11 +65,11 @@ const AboutSection = () => (
             Smart sensors in bins monitor fill levels, temperature, and waste composition in real-time.
           </p>
         </div>
-        
+
         <div className="bg-card shadow-sm rounded-lg p-6 card-hover">
           <div className="h-12 w-12 bg-eco-100 rounded-md flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-eco-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
             </svg>
           </div>
           <h3 className="text-xl font-semibold">AI & Machine Learning</h3>
@@ -77,7 +77,7 @@ const AboutSection = () => (
             Algorithms predict fill rates, optimize collection routes, and identify waste patterns.
           </p>
         </div>
-        
+
         <div className="bg-card shadow-sm rounded-lg p-6 card-hover">
           <div className="h-12 w-12 bg-eco-100 rounded-md flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-eco-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -141,10 +141,10 @@ const BinAttendersSection = () => (
         </div>
         <div className="mt-10 md:mt-0 md:w-1/2">
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <img 
-              className="w-full h-auto" 
-              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80" 
-              alt="Waste Management Driver" 
+            <img
+              className="w-full h-auto"
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80"
+              alt="Waste Management Driver"
             />
           </div>
         </div>
@@ -186,14 +186,14 @@ const CustomersSection = () => (
             </Button>
           </div>
         </div>
-        <div className="mt-10 md:mt-0 md:w-1/2 md:order-1">
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <img 
-              className="w-full h-auto" 
-              src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" 
-              alt="Person using smartphone for waste management" 
+        <div className="mt-10 md:mt-0 md:w-1/2 md:order-1 flex justify-center">
+          <div className="rounded-lg overflow-hidden shadow-lg w-full max-w-lg">
+            <img
+              className="w-full h-auto rounded-lg object-cover"
+              src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              alt="Person using smartphone for waste management"
             />
-          </div>
+          </div>  
         </div>
       </div>
     </div>
