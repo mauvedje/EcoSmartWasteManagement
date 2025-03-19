@@ -1,7 +1,3 @@
-**Here's a **README.md** file for your **EcoWaste Management System** repository on GitHub:  
-
----
-
 ## 🌿 **EcoWaste Management System**  
 A smart and efficient waste management system for a cleaner and greener environment.  
 
