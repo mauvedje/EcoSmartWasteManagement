@@ -27,7 +27,7 @@ const LoginForm = ({ onLogin }: { onLogin: () => void }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (email && password) {
       toast({
         title: "Login successful",
@@ -46,11 +46,11 @@ const LoginForm = ({ onLogin }: { onLogin: () => void }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
-        <Input 
-          id="email" 
-          type="email" 
-          placeholder="name@example.com" 
+        <Label htmlFor="email" className="text-lg font-medium">Email</Label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="name@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -58,14 +58,14 @@ const LoginForm = ({ onLogin }: { onLogin: () => void }) => {
       </div>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="text-lg font-medium">Password</Label>
           <Link to="#" className="text-sm text-primary hover:underline">
             Forgot password?
           </Link>
         </div>
-        <Input 
-          id="password" 
-          type="password" 
+        <Input
+          id="password"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -184,14 +184,14 @@ const DriverDashboard = () => {
             </CardContent>
           </Card>
         </div>
-        
+
         <div className="w-full md:w-3/4">
           <Tabs defaultValue="map">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="map">Map View</TabsTrigger>
               <TabsTrigger value="list">List View</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="map" className="mt-4">
               <Card>
                 <CardHeader>
@@ -206,7 +206,7 @@ const DriverDashboard = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 to-slate-900/40 flex items-center justify-center">
                       <p className="text-white text-lg font-semibold">Interactive Map View</p>
                     </div>
-                    
+
                     <div className="absolute top-1/4 left-1/3 animate-pulse-slow">
                       <div className="relative">
                         <MapPin className="h-6 w-6 text-waste-high" />
@@ -216,16 +216,16 @@ const DriverDashboard = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="absolute top-1/2 left-2/3 animate-pulse-slow" style={{ animationDelay: "1s" }}>
                       <MapPin className="h-6 w-6 text-waste-medium" />
                     </div>
-                    
+
                     <div className="absolute bottom-1/3 right-1/4 animate-pulse-slow" style={{ animationDelay: "1.5s" }}>
                       <MapPin className="h-6 w-6 text-waste-low" />
                     </div>
                   </div>
-                  
+
                   <div className="mt-6 flex flex-wrap gap-4">
                     <div className="flex items-center">
                       <div className="h-3 w-3 rounded-full bg-waste-high mr-2"></div>
@@ -243,7 +243,7 @@ const DriverDashboard = () => {
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="list" className="mt-4">
               <Card>
                 <CardHeader>
@@ -270,9 +270,9 @@ const DriverDashboard = () => {
                                 </div>
                               </div>
                             </div>
-                            <Button 
-                              size="sm" 
-                              variant={bin.fillLevel > 75 ? "default" : "outline"} 
+                            <Button
+                              size="sm"
+                              variant={bin.fillLevel > 75 ? "default" : "outline"}
                               className="mt-2 md:mt-0"
                               onClick={() => handleCollectBin(bin.id)}
                             >
@@ -280,13 +280,12 @@ const DriverDashboard = () => {
                               Collect
                             </Button>
                           </div>
-                          
+
                           <div className="mt-3 w-full bg-secondary rounded-full h-2">
-                            <div 
-                              className={`h-2 rounded-full ${
-                                bin.fillLevel >= 75 ? 'bg-waste-high' : 
-                                bin.fillLevel >= 40 ? 'bg-waste-medium' : 'bg-waste-low'
-                              }`} 
+                            <div
+                              className={`h-2 rounded-full ${bin.fillLevel >= 75 ? 'bg-waste-high' :
+                                  bin.fillLevel >= 40 ? 'bg-waste-medium' : 'bg-waste-low'
+                                }`}
                               style={{ width: `${bin.fillLevel}%` }}
                             ></div>
                           </div>
@@ -298,7 +297,7 @@ const DriverDashboard = () => {
               </Card>
             </TabsContent>
           </Tabs>
-          
+
           <Card className="mt-6">
             <CardHeader>
               <CardTitle>Today's Collection Route</CardTitle>
@@ -315,7 +314,7 @@ const DriverDashboard = () => {
                     Your route is being continuously optimized based on bin fill levels, traffic conditions, and priority areas.
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 border rounded-lg">
                     <h4 className="text-sm font-medium mb-1">Next Collection</h4>
@@ -335,7 +334,7 @@ const DriverDashboard = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <Button className="w-full">
                   <Map className="h-4 w-4 mr-2" />
                   View Complete Route
@@ -365,43 +364,43 @@ const BinAttenders = () => {
                     <span className="eco-text-gradient">Bin Attenders</span> Portal
                   </h1>
                   <p className="text-lg text-muted-foreground mb-8">
-                    Access your optimized collection routes, monitor bin status in real-time, 
+                    Access your optimized collection routes, monitor bin status in real-time,
                     and efficiently manage waste collection with our smart system.
                   </p>
                   <div className="bg-secondary/50 rounded-lg p-6 mb-6">
                     <h3 className="text-xl font-medium mb-4">Driver Benefits</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <div className="mt-1 bg-eco-100 rounded-full p-1 mr-2">
-                          <Map className="h-4 w-4 text-eco-600" />
+                        <div className="mt-3 bg-eco-100 rounded-full p-1 mr-2">
+                          <Map className="h-6 w-6 text-eco-600" />
                         </div>
                         <div>
-                          <h4 className="font-medium">Smart Navigation</h4>
-                          <p className="text-sm text-muted-foreground">Optimized routes based on bin fill levels</p>
+                          <h4 className="mt-3 text-xl font-medium">Smart Navigation</h4>
+                          <p className="text-m text-muted-foreground">Optimized routes based on bin fill levels</p>
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <div className="mt-1 bg-eco-100 rounded-full p-1 mr-2">
-                          <BatteryMedium className="h-4 w-4 text-eco-600" />
+                        <div className="mt-3 bg-eco-100 rounded-full p-1 mr-2">
+                          <BatteryMedium className="h-6 w-6 text-eco-600" />
                         </div>
                         <div>
-                          <h4 className="font-medium">Real-time Monitoring</h4>
-                          <p className="text-sm text-muted-foreground">Live updates on bin status and fill levels</p>
+                          <h4 className="mt-3 text-xl font-medium">Real-time Monitoring</h4>
+                          <p className="text-m text-muted-foreground">Live updates on bin status and fill levels</p>
                         </div>
                       </li>
                       <li className="flex items-start">
-                        <div className="mt-1 bg-eco-100 rounded-full p-1 mr-2">
-                          <Truck className="h-4 w-4 text-eco-600" />
+                        <div className="mt-3 bg-eco-100 rounded-full p-1 mr-2">
+                          <Truck className="h-6 w-6 text-eco-600" />
                         </div>
                         <div>
-                          <h4 className="font-medium">Efficient Collection</h4>
-                          <p className="text-sm text-muted-foreground">Focus on high-priority bins first</p>
+                          <h4 className="mt-3 text-xl font-medium">Efficient Collection</h4>
+                          <p className="text-m text-muted-foreground">Focus on high-priority bins first</p>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
-                
+
                 <div>
                   <Card>
                     <CardHeader>

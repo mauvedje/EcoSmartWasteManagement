@@ -18,7 +18,7 @@ const LoginForm = ({ onLogin }: { onLogin: () => void }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (email && password) {
       // In a real app, this would be a proper authentication
       toast({
@@ -38,11 +38,11 @@ const LoginForm = ({ onLogin }: { onLogin: () => void }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
-        <Input 
-          id="email" 
-          type="email" 
-          placeholder="name@example.com" 
+        <Label htmlFor="email" className="text-lg font-medium">Email</Label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="name@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -50,14 +50,14 @@ const LoginForm = ({ onLogin }: { onLogin: () => void }) => {
       </div>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password" className="text-lg font-medium">Password</Label>
           <Link to="#" className="text-sm text-primary hover:underline">
             Forgot password?
           </Link>
         </div>
-        <Input 
-          id="password" 
-          type="password" 
+        <Input
+          id="password"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -93,7 +93,7 @@ const dumpingHistoryData = [
 
 const CustomerDashboard = () => {
   const { toast } = useToast();
-  
+
   const handleScanQR = () => {
     toast({
       title: "QR Scanner Activated",
@@ -136,7 +136,7 @@ const CustomerDashboard = () => {
             </CardContent>
           </Card>
         </div>
-        
+
         {/* Main Content */}
         <div className="w-full md:w-3/4">
           <Card className="mb-8">
@@ -172,13 +172,13 @@ const CustomerDashboard = () => {
               </div>
             </CardContent>
           </Card>
-          
+
           <Tabs defaultValue="dumping-history">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="dumping-history">Dumping History</TabsTrigger>
               <TabsTrigger value="rewards">Rewards</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="dumping-history" className="mt-4">
               <Card>
                 <CardHeader>
@@ -213,7 +213,7 @@ const CustomerDashboard = () => {
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="rewards" className="mt-4">
               <Card>
                 <CardHeader>
@@ -273,49 +273,49 @@ const Customers = () => {
                     <span className="eco-text-gradient">Customer</span> Portal
                   </h1>
                   <p className="text-lg text-muted-foreground mb-8">
-                    Join our eco-conscious community to track your waste disposal activities, 
+                    Join our eco-conscious community to track your waste disposal activities,
                     earn rewards, and make a positive impact on the environment.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <div className="flex items-start">
-                      <div className="mt-1 bg-eco-100 rounded-full p-1">
-                        <QrCode className="h-4 w-4 text-eco-600" />
+                      <div className="mt-3 bg-eco-100 rounded-full p-1">
+                        <QrCode className="h-6 w-6 text-eco-600" />
                       </div>
-                      <div className="ml-2">
-                        <h3 className="text-sm font-medium">Scan & Log</h3>
-                        <p className="text-xs text-muted-foreground">Easily log your waste disposal</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="mt-1 bg-eco-100 rounded-full p-1">
-                        <Trophy className="h-4 w-4 text-eco-600" />
-                      </div>
-                      <div className="ml-2">
-                        <h3 className="text-sm font-medium">Earn Rewards</h3>
-                        <p className="text-xs text-muted-foreground">Get points for responsible disposal</p>
+                      <div className="mt-3 ml-3">
+                        <h3 className="text-xl font-medium">Scan & Log</h3>
+                        <p className="text-sm text-muted-foreground">Easily log your waste disposal</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <div className="mt-1 bg-eco-100 rounded-full p-1">
-                        <Clock className="h-4 w-4 text-eco-600" />
+                      <div className="mt-3 bg-eco-100 rounded-full p-1">
+                        <Trophy className="h-6 w-6 text-eco-600" />
                       </div>
-                      <div className="ml-2">
-                        <h3 className="text-sm font-medium">Track History</h3>
-                        <p className="text-xs text-muted-foreground">View your environmental impact</p>
+                      <div className="mt-3 ml-3">
+                        <h3 className="text-xl font-medium">Earn Rewards</h3>
+                        <p className="text-sm text-muted-foreground">Get points for responsible disposal</p>
                       </div>
                     </div>
                     <div className="flex items-start">
-                      <div className="mt-1 bg-eco-100 rounded-full p-1">
-                        <User className="h-4 w-4 text-eco-600" />
+                      <div className="mt-3 bg-eco-100 rounded-full p-1">
+                        <Clock className="h-6 w-6 text-eco-600" />
                       </div>
-                      <div className="ml-2">
-                        <h3 className="text-sm font-medium">Personal Profile</h3>
-                        <p className="text-xs text-muted-foreground">Manage your account</p>
+                      <div className="mt-3 ml-3">
+                        <h3 className="text-xl font-medium">Track History</h3>
+                        <p className="text-sm text-muted-foreground">View your environmental impact</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start">
+                      <div className="mt-3 bg-eco-100 rounded-full p-1">
+                        <User className="h-6 w-6 text-eco-600" />
+                      </div>
+                      <div className="mt-3 ml-3">
+                        <h3 className="text-xl font-medium">Personal Profile</h3>
+                        <p className="text-sm text-muted-foreground">Manage your account</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <Card>
                     <CardHeader>
