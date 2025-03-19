@@ -32,7 +32,7 @@ const HomeSection = () => (
         <div className="md:w-1/2 mt-10 md:mt-0">
           <div className="aspect-video bg-card rounded-lg shadow-lg overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src="\replace.jpg"
               alt="Smart Waste Management"
               className="w-full h-full object-cover"
             />

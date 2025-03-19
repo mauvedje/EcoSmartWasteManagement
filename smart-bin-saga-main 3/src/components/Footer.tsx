@@ -29,9 +29,9 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Contact</h3>
             <ul className="mt-4 space-y-2">
-              <li className="text-muted-foreground text-sm">info@ecowaste.com</li>
-              <li className="text-muted-foreground text-sm">+1 (555) 123-4567</li>
-              <li className="text-muted-foreground text-sm">123 Green Street, Eco City</li>
+              <li className="text-muted-foreground text-sm">info@srm.com</li>
+              <li className="text-muted-foreground text-sm">+044 2741 7000</li>
+              <li className="text-muted-foreground text-sm">SRM University</li>
             </ul>
           </div>
         </div>
