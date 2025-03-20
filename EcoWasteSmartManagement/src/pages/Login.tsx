@@ -87,7 +87,7 @@ const Login = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="space-y-9">
                   <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                     <li className="flex items-start">
                       <svg className="h-5 w-5 text-eco-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
