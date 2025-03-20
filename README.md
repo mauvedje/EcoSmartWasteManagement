@@ -62,7 +62,7 @@ This project is **open-source** under the **MIT License**.
 
 ### **📩 Contact**
 For any questions, feel free to reach out:  
-📧 Email: vitan2022@gmail.com
+📧 Email: jmohit1107@gmail.com
 🔗 GitHub: https://github.com/Vikash-GitHere
 
 ---
